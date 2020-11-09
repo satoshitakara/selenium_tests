@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seminar Evaluation Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, p { 
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      color: #666;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      h1 {
+      font-weight: 400;
+      line-height: 28px;
+      }
+      hr {
+      margin: 20px 0;
+      }
+      span.required {
+      color: red;
+      }
+      .personal-details, .question-block, .statements-block {
+      padding-bottom: 20px;
+      }
+      .personal-details >div {
+      display: flex;
+      flex-direction: column;
+      }
+      input {
+      padding: 8px 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      outline: none;
+      vertical-align: middle;
+      }
+      input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      .question, .answer, table, textarea {
+      width: 100%;
+      }
+      .answer input, table input {
+      width: auto;
+      }
+      th, td {
+      width: 14%;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .first-col {
+      width: 30%;
+      text-align: left;
+      }
+      small {
+      display: block;
+      line-height: 18px;
+      opacity: 0.5;
+      }
+      .btn-block {
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border-radius: 5px; 
+      border: none;
+      background: #095484; 
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .personal-details >div {
+      flex-direction: row;
+      align-items: center;
+      }
+      label {
+      width: 95px;
+      }
+      input {
+      width: calc((100% - 130px)/2);
+      }
+      input.first-name, input.seminar-title {
+      margin: 0 5px 10px;
+      }
+      .question-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .question, .answer {
+      width: 50%;
+      }
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <form action="/">
+        <h1>Seminar Evaluation Form</h1>
+        <p>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
+        <hr>
+        <div class="personal-details">
+          <div>
+            <label>Name<span class="required">*</span></label>
+            <input  class="first-name" type="text" name="name" placeholder="First" required/>
+            <input type="text" name="name" placeholder="Last" required/>
+          </div>
+          <div>
+            <label>Seminar Title:<span class="required">*</span></label>
+            <input  class="seminar-title" type="text" name="name" required/>
+          </div>
+        </div>
+        <div class="question-block">
+          <p class="question">How did you hear about the seminar?<span class="required">*</span></p>
+          <div class="answer">
+            <div>
+              <input type="radio" value="none" id="rOne" name="how-hear" required />
+              <label for="rOne" class="radio">Website</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="rTwo" name="how-hear" required/>
+              <label for="rTwo" class="radio">Radio</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="rThree" name="how-hear" required/>
+              <label for="rThree" class="radio">Newsletter</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="rFour" name="how-hear" required/>
+              <label for="rFour" class="radio">Flyer</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="rFive" name="how-hear" required/>
+              <label for="rFive" class="radio">Other</label>
+            </div>
+          </div>
+        </div>
+        <div class="question-block">
+          <p class="question">What is your overall assessment of the seminar?</p>
+          <div class="answer">
+            <div>
+              <input type="radio" value="none" id="radioOne" name="assessment" />
+              <label for="radioOne" class="radio">Very Unsatisfied</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="radioTwo" name="assessment" />
+              <label for="radioTwo" class="radio">Unsatisfied</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="radioThree" name="assessment" />
+              <label for="radioThree" class="radio">Neutral</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="radioFour" name="assessment" />
+              <label for="radioFour" class="radio">Satisfied</label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="radioFive" name="assessment" />
+              <label for="radioFive" class="radio">Very Satisfied</label>
+            </div>
+          </div>
+        </div>
+        <div class="statements-block">
+          <p>How much do you agree with the following statements regarding the seminar?<span class="required">*</span></p>
+          <table>
+            <thead>
+              <tr>
+                <th class="first-col"></th>
+                <th>Strongly Disagree</th>
+                <th>Disagree</th>
+                <th>Neutral</th>
+                <th>Agree</th>
+                <th>Strongly Agree</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="first-col">The information presented was useful</td>
+                <td><input type="radio" value="None" name="useful" required/></td>
+                <td><input type="radio" value="None" name="useful" required/></td>
+                <td><input type="radio" value="None" name="useful" required/></td>
+                <td><input type="radio" value="None" name="useful" required/></td>
+                <td><input type="radio" value="None" name="useful" required/></td>
+              </tr>
+              <tr>
+                <td class="first-col">The speaker was engaging and knowledgeable</td>
+                <td><input type="radio" value="None" name="speaker" required/></td>
+                <td><input type="radio" value="None" name="speaker" required/></td>
+                <td><input type="radio" value="None" name="speaker" required/></td>
+                <td><input type="radio" value="None" name="speaker" required/></td>
+                <td><input type="radio" value="None" name="speaker" required/></td>
+              </tr>
+              <tr>
+                <td class="first-col">The length of this seminar was satisfactory</td>
+                <td><input type="radio" value="None" name="length" required/></td>
+                <td><input type="radio" value="None" name="length" required/></td>
+                <td><input type="radio" value="None" name="length" required/></td>
+                <td><input type="radio" value="None" name="length" required/></td>
+                <td><input type="radio" value="None" name="length" required/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="question-block">
+          <p class="question">Do you have further comments or suggestions?<span class="required">*</span><small>And thank you again for filling out the seminar evaluation form</small></p>
+          <div class="answer">
+            <textarea rows="5" required></textarea>
+          </div>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="/">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
